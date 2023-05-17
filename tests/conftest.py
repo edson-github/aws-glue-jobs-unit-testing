@@ -9,6 +9,5 @@ def glueContext():
     Function to setup test environment for PySpark and Glue
     """
     spark_context = SparkContext()
-    glueContext = GlueContext(spark_context)
-    yield glueContext
+    yield GlueContext(spark_context)
     spark_context.stop()
